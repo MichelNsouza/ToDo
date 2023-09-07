@@ -7,14 +7,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Document</title>
+    <title>ToDo List</title>
 </head>
 
 <body>
 
     <div class="container">
         <div class="col-md-12">
-            <h1 class="mt-5 mb-5">ToDo list </h1>
+            <h1 class="mt-5 mb-5">Lista de Tarefas </h1>
                 <ul class="list-group">
                     @foreach($listaDetarefas as $item)
                         <li class="list-group-item">
@@ -33,7 +33,8 @@
                     @csrf
                     <div class="mb-3">
                         <textarea class="form-control" id=tarefa" name="tarefa" rows="3">{{$tarefa->descricao ?? ""}}</textarea>
-                        <button class="btn btn-primary mt-3">Cadastrar</button>
+                        <a  class="btn btn-primary mt-3" href="/">Novo</a>
+                        <button class="btn btn-primary mt-3">Enviar</button>
                     </div>
                 </form>
             </div>

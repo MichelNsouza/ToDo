@@ -30,7 +30,7 @@ class TarefasController extends Controller
     {
         $tarefa = Tarefa::find($id);
         $listaDetarefas = $tarefa::all();
-        return view('todo.index',compact('listaDetarefas', 'tarefa') );
+        return view('todo.index', compact('listaDetarefas', 'tarefa'));
 
     }
 
