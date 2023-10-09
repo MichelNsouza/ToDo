@@ -15,7 +15,6 @@
             "dest": "/api/index.php"
         }
     ],
-
     "env": {
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -27,11 +26,5 @@
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
-    },
-
-    "functions": {
-        "api/index.php": {
-            "maxDuration": 120
-        }
     }
 }
