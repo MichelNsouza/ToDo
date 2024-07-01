@@ -1,7 +1,13 @@
 {
     "version": 2,
     "builds": [
-        { "src": "/api/index.php", "use": "vercel-php@0.6.0" },
+        { 
+            "src": "/api/index.php", 
+            "use": "vercel-php@0.6.0",
+            "config": {
+                "installCommand": "apt-get update && apt-get install -y libssl1.0.0"
+            }
+        },
         { "src": "/public/**", "use": "@vercel/static" }
     ],
     "routes": [
@@ -21,7 +27,6 @@
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
-
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
